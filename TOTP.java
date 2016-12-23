@@ -9,6 +9,13 @@
  (http://trustee.ietf.org/license-info).
  */
 
+/**
+https://tools.ietf.org/html/rfc6238
+https://tools.ietf.org/html/rfc4226
+this program work with HmacSHA512, UTC time, ascii input and 
+generating a 10-digit password
+*/
+
  import java.lang.reflect.UndeclaredThrowableException;
  import java.security.GeneralSecurityException;
  import java.text.DateFormat;
@@ -222,7 +229,7 @@
          //"3132333435363738393031323334353637383930" +
          //"31323334";
          
-         String source = "jet.lau@gmail.comHDECHALLENGE003";
+         String source = "testTOTPjavaprogramme";
          String seed64 = asciiToHex(source);
          System.out.println("seed64 is " + seed64);
 
