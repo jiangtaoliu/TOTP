@@ -37,7 +37,6 @@ def hotp(secret, count):
     return sbits % 1000000
 
 
-# jet.lau@gmail.comHDECHALLENGE003
 def totp(secret, unix_time):
     return hotp(secret, int(unix_time))
 
@@ -59,8 +58,7 @@ if __name__ == '__main__':
             raise RuntimeError('{}: Invalid counter.'.format(sys.argv[0]))
         try:
             secret = sys.argv[2]
-            #key = base64.b32encode(secret, casefold=True)
-            key = "JSXILTMMF2UAZ3NMFUWYLTDN5WUQRCFINEECTCMIVHEORJQGAZQ===="
+            key = base64.b32encode(secret, casefold=True)
         except TypeError:
             print('{}: Invalid secret.'.format(sys.argv[0]))
             sys.exit(1)
